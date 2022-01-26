@@ -2,8 +2,13 @@
 
 ## Outline of project
 
-[] Need to set up data pulling process using API from coingeko
-[] Build out plan for what data needs to be pulled
+[ ] Need to set up data pulling process using API from coingeko
+
+* https://www.coingecko.com/en/api/documentation
+* https://github.com/man-c/pycoingecko
+* 
+[ ] Build out plan for what data needs to be pulled
+
 	[] market cap
 	[] trading price
 	[] trading volume
