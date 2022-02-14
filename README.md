@@ -2,7 +2,7 @@
 
 ## Outline of project
 
-[ ] Need to set up data pulling process using API from coingeko
+[X] Need to set up data pulling process using API from coingeko
 
 * https://www.coingecko.com/en/api/documentation
 * https://github.com/man-c/pycoingecko
