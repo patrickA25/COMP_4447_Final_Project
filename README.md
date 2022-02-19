@@ -10,8 +10,9 @@
 [ ] Build out plan for what data needs to be pulled
 
 	[x] market cap
-	[] trading price
-	[] build time series graph
+	[x] build time series graph
+	[] Make adjustment to scale to have cleaner look
 	[] build basic forcasting
+	[] trading price finder
 	[] list of possibel coins
 
