@@ -5,6 +5,13 @@ from rich.console import Console
 from rich.table import Table
 
 
+def testing_coin_connection(cg):
+    test_con_value = cg.ping()
+    if test_con_value == {'gecko_says': '(V3) To the Moon!'}:
+        return 'Connection is good'
+    else:
+        return ['Connection not good',test_con_value]
+
 def pull_in_top_5_data(cg,cryp_list):
     data_pull = cg.get_price(ids =cryp_list,vs_currencies = 'usd')
     data_pull_DF =pd.DataFrame.from_dict(data_pull,orient='index')
@@ -46,61 +53,14 @@ def top_7_table(cg):
     table.add_column("Price BTC",justify="center",style="green")
     table.add_column("Price USD",justify="center",style="green")
 
-    table.add_row(str(top_7_data_DF.iloc[0]["item.score"]+1),
-                str(top_7_data_DF.iloc[0]["item.name"]),
-                str(top_7_data_DF.iloc[0]["item.id"]),
-                str(top_7_data_DF.iloc[0]["item.symbol"]),
-                str(top_7_data_DF.iloc[0]["item.market_cap_rank"]),
-                str(top_7_data_DF.iloc[0]["item.price_btc"]),
-                str(top_7_data_DF.iloc[0]["US_Value"]))
-
-    table.add_row(str(top_7_data_DF.iloc[1]["item.score"]+1),
-                str(top_7_data_DF.iloc[1]["item.name"]),
-                str(top_7_data_DF.iloc[1]["item.id"]),
-                str(top_7_data_DF.iloc[1]["item.symbol"]),
-                str(top_7_data_DF.iloc[1]["item.market_cap_rank"]),
-                str(top_7_data_DF.iloc[1]["item.price_btc"]),
-                str(top_7_data_DF.iloc[1]["US_Value"]))
-
-    table.add_row(str(top_7_data_DF.iloc[2]["item.score"]+1),
-                str(top_7_data_DF.iloc[2]["item.name"]),
-                str(top_7_data_DF.iloc[2]["item.id"]),
-                str(top_7_data_DF.iloc[2]["item.symbol"]),
-                str(top_7_data_DF.iloc[2]["item.market_cap_rank"]),
-                str(top_7_data_DF.iloc[2]["item.price_btc"]),
-                str(top_7_data_DF.iloc[2]["US_Value"]))
-
-    table.add_row(str(top_7_data_DF.iloc[3]["item.score"]+1),
-                str(top_7_data_DF.iloc[3]["item.name"]),
-                str(top_7_data_DF.iloc[3]["item.id"]),
-                str(top_7_data_DF.iloc[3]["item.symbol"]),
-                str(top_7_data_DF.iloc[3]["item.market_cap_rank"]),
-                str(top_7_data_DF.iloc[3]["item.price_btc"]),
-                str(top_7_data_DF.iloc[3]["US_Value"]))
-
-    table.add_row(str(top_7_data_DF.iloc[4]["item.score"]+1),
-                str(top_7_data_DF.iloc[4]["item.name"]),
-                str(top_7_data_DF.iloc[4]["item.id"]),
-                str(top_7_data_DF.iloc[4]["item.symbol"]),
-                str(top_7_data_DF.iloc[4]["item.market_cap_rank"]),
-                str(top_7_data_DF.iloc[4]["item.price_btc"]),
-                str(top_7_data_DF.iloc[4]["US_Value"]))
-
-    table.add_row(str(top_7_data_DF.iloc[5]["item.score"]+1),
-                str(top_7_data_DF.iloc[5]["item.name"]),
-                str(top_7_data_DF.iloc[5]["item.id"]),
-                str(top_7_data_DF.iloc[5]["item.symbol"]),
-                str(top_7_data_DF.iloc[5]["item.market_cap_rank"]),
-                str(top_7_data_DF.iloc[5]["item.price_btc"]),
-                str(top_7_data_DF.iloc[5]["US_Value"]))
-
-    table.add_row(str(top_7_data_DF.iloc[6]["item.score"]+1),
-                str(top_7_data_DF.iloc[6]["item.name"]),
-                str(top_7_data_DF.iloc[6]["item.id"]),
-                str(top_7_data_DF.iloc[6]["item.symbol"]),
-                str(top_7_data_DF.iloc[6]["item.market_cap_rank"]),
-                str(top_7_data_DF.iloc[6]["item.price_btc"]),
-                str(top_7_data_DF.iloc[6]["US_Value"]))
+    for i in top_7_data_DF.index:
+        table.add_row(str(top_7_data_DF.iloc[i]["item.score"]+1),
+                    str(top_7_data_DF.iloc[i]["item.name"]),
+                    str(top_7_data_DF.iloc[i]["item.id"]),
+                    str(top_7_data_DF.iloc[i]["item.symbol"]),
+                    str(top_7_data_DF.iloc[i]["item.market_cap_rank"]),
+                    str(top_7_data_DF.iloc[i]["item.price_btc"]),
+                    str(top_7_data_DF.iloc[i]["US_Value"]))
 
     console = Console()
     console.print(table)
