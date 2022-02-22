@@ -64,3 +64,13 @@ def top_7_table(cg):
 
     console = Console()
     console.print(table)
+
+def get_token_list(cg):
+    cg.get_coins_list()
+    print((cg.get_coins_list()))
+    
+def testing_code(cg):
+    print(cg)
+    data_pull = cg.get_price(ids ='bitcoin',vs_currencies = 'usd')
+    print(type(data_pull))
+    print(pd.DataFrame.from_dict(data_pull))
