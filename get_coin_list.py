@@ -3,9 +3,10 @@ import pandas as pd
 import numpy as np
 
 def get_token_list(cg):
-    cg.get_coins_list()
-    print((cg.get_coins_list()))
-    
+    #this will return a list of dic containing ID,syble and name
+    temp_list = cg.get_coins_list()
+    return pd.DataFrame(temp_list).head()
+
 if __name__ == '__main__':
     cg = pycoin.CoinGeckoAPI()
-    get_token_list(cg)
+    print(get_token_list(cg))

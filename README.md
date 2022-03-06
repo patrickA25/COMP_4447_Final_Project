@@ -52,6 +52,9 @@ The API that is used is the free API that is provided by CoinGecko. All of docum
 ```python
 testing_coin_connection(CG)
 ```
+#### Overview
+This will test the API connection to CoinGecko, and will return weather or not the coneection is good.
+
 #### Inputes
 
 CG => This is the API key for CoinGecko. A free key can be apptaned by running ```CoinGeckoAPI()``` from the pycoingecko package. For more information please see API seciont of the documentation above.
@@ -65,6 +68,9 @@ cryp_list = ['bitcoin', 'tether', 'ethereum','solana','binance coin']
 
 pull_in_top_5_data(CG,cryp_list)
 ```
+#### Overview 
+This will return the 5 higest coins on CoinGeko in a table format.
+
 #### Inputes
 
 1) CG => This is the API key for CoinGecko. A free key can be apptaned by running ```CoinGeckoAPI()``` from the pycoingecko package. For more information please see API seciont of the documentation above.
@@ -78,10 +84,42 @@ pull_in_top_5_data(CG,cryp_list)
 ```python
 get_token_list(CG)
 ```
+#### Overview
+
+The get_token_list function will return all of the current tokens that are avaiable on CoinGeko. It will return a datafrmae that has ID,symbol and the name of the coin.
 
 #### Input
+
 1) CG => This is the API key for CoinGecko. A free key can be apptaned by running ```CoinGeckoAPI()``` from the pycoingecko package. For more information please see API seciont of the documentation above.
+
+
+#### Outputs
+
+1) Returns a dataframe with all of the coins that are avaible on coinGeko. The dataframe has the columns, ID,symbol and name.
 
 ### top_7_table
 
+```python
+cg = pycoin.CoinGeckoAPI()
+top_7_table(cg)
+```
+
+#### Overview
+
+1) The Top_7_table function returns a table of top seven most search coins on CoinGeko and outputs the table to the standerd out. The table will have the coins ranked value,coin name, Coin ID,coin symbol, market cap, current trading price in Bitoin and current price in US dollars.
+
+#### Input
+
+1) CG => This is the API key for CoinGecko. A free key can be apptaned by running ```CoinGeckoAPI()``` from the pycoingecko package. For more information please see API seciont of the documentation above.
+
+#### Outputs
+
+1) stuff
+
 ### Chart_Analysis
+
+#### Overview
+
+#### Inputs
+
+#### Outputs
