@@ -15,15 +15,16 @@
 	[] Fill out README file
 		[X] Over view of project
 		[X] API information
+		[] make table of contents
 		[] Data Cleaning steps used
 		[] Function list 
 			[X] testing_coin_connection
-			[] pull_in_top_5_data
-			[] make_top_5_table
-			[] get_token_list
-			[] top_7_table
+			[X] pull_in_top_5_data
+			[X] make_top_5_table
+			[X] get_token_list
+			[X] top_7_table
 			[] Chart_anlysis
-
+			[] basic forcasting
 	[x] market cap
 	[x] build time series graph
 	[X] Make adjustment to scale to have cleaner look
