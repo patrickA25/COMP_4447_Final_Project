@@ -153,15 +153,26 @@ top_7_table(cg)
 1) CG => This is the API key for CoinGecko. A free key can be apptaned by running ```CoinGeckoAPI()``` from the pycoingecko package. For more information please see API seciont of the documentation above.
 
 ### Outputs
-
+1) Returns a dataframe with all of the top 7 coins being search for on CoinGecko.
 1) stuff 
 
 ## Chart_Analysis <a name="chartanalysis"></a>
-
+```python 
+cg = pycoin.CoinGeckoAPI()
+Chart_Analysis(api_key = cg, 
+	       days_back = 90,
+	       coin = 'bitcoin',
+	       info = ['Price','Market Cap','Total Volumes'])
+	       
+```
 ### Overview
-
+1) The Chart analysis fucnctions can return upto 3 charts related to any one given coin. That charts that can be returned are price over time, market cap over time and total volume over time.
+ 
 ### Inputs
-
+1) api_key => This is the API key for CoinGecko. A free key can be apptaned by running ```CoinGeckoAPI()``` from the pycoingecko package. For more information please see API seciont of the documentation above.
+2) days_back => How many days back you would like to pull coin information.
+3) coin => The name of the coin that you want to pull information for.
+4) info => A list of graphs that you would like to see. The three graphs that can be inputed Price, Market Cap and total volume.
 ### Outputs
 
-## Chart_Analysis <a name="basicforcasting"></a>
+## Forcasting_a_Coin <a name="basicforcasting"></a>
