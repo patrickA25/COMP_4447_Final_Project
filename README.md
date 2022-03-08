@@ -15,7 +15,7 @@
 		[X] Over view of project
 		[X] API information
 		[X] make table of contents
-		[] Data Cleaning steps used
+		[X] Data Cleaning steps used
 		[] Function list 
 			[X] testing_coin_connection
 			[X] pull_in_top_5_data
@@ -53,8 +53,33 @@ The API that is used is the free API that is provided by CoinGecko. All of docum
 
 # Data Cleaning <a name="DataCleaning"></a>
 ------------------------------
+A lot of the data cleaning was made easy because of the pycoingecko python packages. Most of the data from CoinGeck API would come back in a dictionary. Below are some examples of how the data would come back.
 
+## Getting Price data
+```python
+cg.get_price(ids='bitcoin',vs_currencies='usd')
+{'bitcoin'
+	{'usd' : 38258}}
+	
+cg.get_price(ids = ['bitcoin','litecoin'],vs_currencies='usd')
+{'bitcoin': 
+	{'usd': 38242}, 
+'litecoin': 
+	{'usd': 99.21}}
+```
 
+## Getting Markget data
+```python
+cg.get_coin_market_chart_by_id(id = 'bitcoin',vs_currency= 'usd',days = 1)
+
+{'prices':
+	{[1646699541000, 38242.27428142403]},
+ 'market_caps':
+ 	{[1646699541000, 725275467246.7909]},
+ 'total_volumes':
+ 	{[1646699541000, 24057303397.88596]}}
+```
+The above code is returning a dictionary with keys of prices,market_caps,and total_volumnes with each element being a list of values. The first value in the list is a time stamp in the format of "find the format name" and the second value being the value of the dictorny key. The way I would extract infromation for a given key I would run ```pd.json_normalize(raw_data,record_path = 'prices')```, to convert the time into standered datetime format I would run the following command ```pd.to_datetime(price_data[0],unit = 'ms')```
 
 # Function List <a name="Functionlist"></a>
 ------------------------------
