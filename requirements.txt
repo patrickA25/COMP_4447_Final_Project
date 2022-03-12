@@ -1,3 +1,8 @@
-numpy
+pycoingecko
 pandas
-rich
+numpy
+Coin_Table_Code
+rich.console
+rich.table
+matplotlib.pyplot
+datetime
