@@ -1,34 +1,4 @@
-# COMP_4447_Final_Project
-
-## Outline of project
-
-[X] Need to set up data pulling process using API from coingeko
-
-* https://www.coingecko.com/en/api/documentation
-* https://github.com/man-c/pycoingecko
-* 
-[ ] Build out plan for what data needs to be pulled
-
-	[] Convert everything to a jupyter notebook
-	[] build basic forcasting
-	[] Fill out README file
-		[X] Over view of project
-		[X] API information
-		[X] make table of contents
-		[X] Data Cleaning steps used
-		[] Function list 
-			[X] testing_coin_connection
-			[X] pull_in_top_5_data
-			[X] make_top_5_table
-			[X] get_token_list
-			[X] top_7_table
-			[] Chart_anlysis
-			[] basic forcasting
-	[X] list of possibel coins
-	[x] market cap
-	[x] build time series graph
-	[X] Make adjustment to scale to have cleaner look
-	[x] trading price finder
+# COMP 4447 Final Project
 
 # Table of Contents
 1. [Project Overview](#projectoverview)
