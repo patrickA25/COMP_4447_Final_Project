@@ -1,7 +1,6 @@
 pycoingecko
 pandas
 numpy
-rich.console
-rich.table
+rich
 matplotlib.pyplot
 datetime
