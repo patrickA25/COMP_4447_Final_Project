@@ -4,3 +4,6 @@ numpy
 rich
 matplotlib
 datetime
+sklearn
+tensorflow
+plotly
