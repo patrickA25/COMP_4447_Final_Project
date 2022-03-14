@@ -1,5 +1,8 @@
 # COMP 4447 Final Project
 
+# Binder Link
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/patrickA25/COMP_4447_Final_Project/TOOL1_FINAL_PROJECT)
+
 # Table of Contents
 1. [Project Overview](#projectoverview)
 2. [API Information](#APIinformation)
